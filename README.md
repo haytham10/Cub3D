@@ -36,4 +36,41 @@ After that you can simply run the game with a map of your choice as an argument:
 
 ## Preview 🎮
 
-<img src="https://raw.githubusercontent.com/haytham10/Cub3D/main/preview/1.png">
+<img src="https://github.com/haytham10/Cub3D/blob/master/preview/1.png">
+
+<img src="https://github.com/haytham10/Cub3D/blob/master/preview/2.png">
+
+<img src="https://github.com/haytham10/Cub3D/blob/master/preview/3.png">
+
+<img src="https://github.com/haytham10/Cub3D/blob/master/preview/4.png">
+
+## Map Assetes 🧭
+
+- A Valid Map file must have a 4 texture paths to the diffrent wall directions:
+
+`NO ./textures/2.xpm`  
+`SO ./textures/3.xpm`  
+`WE ./textures/7.xpm`  
+`EA ./textures/6.xpm`
+
+- Floor and Ceiling Colors should be present in an RGB format:
+
+`F 255,227,171`  
+`C 16,142,210`
+
+- Finally a Valid Map should contain only 1 Player spawn Position `N, W, E, or S` and should be surrounded by walls (`1` or ` `), `0` is for empty space:  
+
+`111111`  
+`100101`  
+`101001`  
+`1100N1`  
+`111111`  
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Authors
+
+- [@Haytham](https://www.github.com/haytham10)
+- [@Amal](https://github.com/amalsenhaji)
