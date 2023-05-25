@@ -6,7 +6,7 @@
 /*   By: hmokhtar <hmokhtar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 15:21:01 by amsenhaj          #+#    #+#             */
-/*   Updated: 2023/04/17 16:19:33 by hmokhtar         ###   ########.fr       */
+/*   Updated: 2023/05/01 18:43:59 by hmokhtar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,14 +63,16 @@ void	check_multiplayer(int width)
 
 void	check_border(int x, int y, int height, int width)
 {
-	if (x == 0 || x == height - 1)
+	if (x == 0 || x == height - 1 || y == 0 || y == width - 1)
 	{
 		if (g_game.data.map[x][y] != '1' && g_game.data.map[x][y] != ' ')
 			ft_error("Error\nInvalid map: Invalid border");
 	}
-	else if (y == 0 || y == width - 1)
+	else if (g_game.data.map[x][y] == '0')
 	{
-		if (g_game.data.map[x][y] != '1' && g_game.data.map[x][y] != ' ')
+		if (g_game.data.map[x][y + 1] == 0 || g_game.data.map[x][y - 1] == \
+				0 || g_game.data.map[x + 1][y] == 0 || \
+				g_game.data.map[x - 1][y] == 0)
 			ft_error("Error\nInvalid map: Invalid border");
 	}
 	else if (g_game.data.map[x][y] != '1' && g_game.data.map[x][y] != '0' \

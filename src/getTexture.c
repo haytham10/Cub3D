@@ -6,13 +6,13 @@
 /*   By: hmokhtar <hmokhtar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 21:21:26 by hmokhtar          #+#    #+#             */
-/*   Updated: 2023/04/17 15:37:13 by hmokhtar         ###   ########.fr       */
+/*   Updated: 2023/05/02 15:39:56 by hmokhtar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/cub.h"
 
-int	valid_texture(char c)
+int	val_t(char c)
 {
 	if (c == 'n' && g_game.textures.no != NULL)
 		ft_error("Error\nDuplicate texture");

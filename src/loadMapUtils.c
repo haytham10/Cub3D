@@ -6,7 +6,7 @@
 /*   By: hmokhtar <hmokhtar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 18:42:13 by hmokhtar          #+#    #+#             */
-/*   Updated: 2023/04/17 15:32:34 by hmokhtar         ###   ########.fr       */
+/*   Updated: 2023/05/02 15:19:46 by hmokhtar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	nbr_char(char *line)
 		if (ft_strchr("01NSEW ", line[i]) != NULL)
 			nbr++;
 		else if (line[i] != ' ')
-			ft_error("Error\nInvalid map 8\n");
+			ft_error("Error\nInvalid map\n");
 		i++;
 	}
 	return (nbr);

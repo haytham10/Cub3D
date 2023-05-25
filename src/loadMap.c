@@ -6,19 +6,17 @@
 /*   By: hmokhtar <hmokhtar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 18:17:13 by hmokhtar          #+#    #+#             */
-/*   Updated: 2023/04/17 16:24:50 by hmokhtar         ###   ########.fr       */
+/*   Updated: 2023/04/28 17:18:39 by hmokhtar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/cub.h"
 
+int	g_in_map = 0;
+int	g_newline = 0;
+
 char	**fill_map(char **map, int *i, char *line)
 {
-	static int	in_map;
-	static int	newline;
-
-	in_map = 0;
-	newline = 0;
 	if ((line[0] == '1' || line[0] == ' ') && g_game.flag == 6)
 	{
 		map = (char **)ft_realloc(map, *i * sizeof(char *),
@@ -27,12 +25,12 @@ char	**fill_map(char **map, int *i, char *line)
 		if (map[*i] == NULL)
 			ft_error("Error\nCan't allocate memory");
 		cpy_valid_char(map[(*i)++], line);
-		in_map = 1;
-		if (newline == 1)
-			ft_error("Error\nInvalid map 9");
+		g_in_map = 1;
+		if (g_newline == 1)
+			ft_error("Error\nInvalid map");
 	}
-	else if (in_map == 1)
-		newline = 1;
+	else if (g_in_map == 1)
+		g_newline = 1;
 	return (map);
 }
 

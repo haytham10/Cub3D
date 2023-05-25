@@ -6,7 +6,7 @@
 /*   By: hmokhtar <hmokhtar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 16:32:21 by hmokhtar          #+#    #+#             */
-/*   Updated: 2023/04/17 20:21:53 by hmokhtar         ###   ########.fr       */
+/*   Updated: 2023/05/25 12:03:08 by hmokhtar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,19 @@ void	move_sides(void)
 {
 	if (g_game.move.m_left == 1)
 	{
-		if (!ft_strchr("1", g_game.data.map[(int)(g_game.player.x \
+		if (!ft_strchr("1 ", g_game.data.map[(int)(g_game.player.x \
 			- g_game.plane_x * SPEED)][(int)g_game.player.y]))
 				g_game.player.x -= g_game.plane_x * SPEED;
-		if (!ft_strchr("1", g_game.data.map[(int)g_game.player.x] \
+		if (!ft_strchr("1 ", g_game.data.map[(int)g_game.player.x] \
 			[(int)(g_game.player.y - g_game.plane_y * SPEED)]))
 				g_game.player.y -= g_game.plane_y * SPEED;
 	}
 	else if (g_game.move.m_right == 1)
 	{
-		if (!ft_strchr("1", g_game.data.map[(int)(g_game.player.x \
+		if (!ft_strchr("1 ", g_game.data.map[(int)(g_game.player.x \
 			+ g_game.plane_x * SPEED)][(int)g_game.player.y]))
 				g_game.player.x += g_game.plane_x * SPEED;
-		if (!ft_strchr("1", g_game.data.map[(int)g_game.player.x] \
+		if (!ft_strchr("1 ", g_game.data.map[(int)g_game.player.x] \
 			[(int)(g_game.player.y + g_game.plane_y * SPEED)]))
 				g_game.player.y += g_game.plane_y * SPEED;
 	}
@@ -38,19 +38,19 @@ void	check_move(void)
 {
 	if (g_game.move.forward == 1)
 	{
-		if (!ft_strchr("1", g_game.data.map[(int)(g_game.player.x \
+		if (!ft_strchr("1 ", g_game.data.map[(int)(g_game.player.x \
 			+ g_game.dir_x * SPEED)][(int)g_game.player.y]))
 			g_game.player.x += g_game.dir_x * SPEED;
-		if (!ft_strchr("1", g_game.data.map[(int)g_game.player.x] \
+		if (!ft_strchr("1 ", g_game.data.map[(int)g_game.player.x] \
 			[(int)(g_game.player.y + g_game.dir_y * SPEED)]))
 			g_game.player.y += g_game.dir_y * SPEED;
 	}
 	else if (g_game.move.backward == 1)
 	{
-		if (!ft_strchr("1", g_game.data.map[(int)(g_game.player.x \
+		if (!ft_strchr("1 ", g_game.data.map[(int)(g_game.player.x \
 			- g_game.dir_x * SPEED)][(int)g_game.player.y]))
 				g_game.player.x -= g_game.dir_x * SPEED;
-		if (!ft_strchr("1", g_game.data.map[(int)g_game.player.x] \
+		if (!ft_strchr("1 ", g_game.data.map[(int)g_game.player.x] \
 			[(int)(g_game.player.y - g_game.dir_y * SPEED)]))
 				g_game.player.y -= g_game.dir_y * SPEED;
 	}

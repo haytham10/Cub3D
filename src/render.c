@@ -6,7 +6,7 @@
 /*   By: hmokhtar <hmokhtar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 15:20:17 by amsenhaj          #+#    #+#             */
-/*   Updated: 2023/04/17 16:35:27 by hmokhtar         ###   ########.fr       */
+/*   Updated: 2023/04/30 23:07:28 by hmokhtar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,13 +53,13 @@ void	render_floor(int c, int renderS, int renderE, int TexX)
 		tex_y = ((i - (g_game.data.res.y / 2 - g_game.ray.height / 2)) \
 			* TAILE_SIZE) / (g_game.ray.height + 0.5);
 		if (g_game.ray.hit == 0 && g_game.ray.ray_x > 0)
-			render_image(i++, c, g_game.west[tex_y * TAILE_SIZE + TexX]);
-		if (g_game.ray.hit == 0 && g_game.ray.ray_x <= 0)
-			render_image(i++, c, g_game.east[tex_y * TAILE_SIZE + TexX]);
-		if (g_game.ray.hit == 1 && g_game.ray.ray_y > 0)
 			render_image(i++, c, g_game.south[tex_y * TAILE_SIZE + TexX]);
-		if (g_game.ray.hit == 1 && g_game.ray.ray_y <= 0)
+		if (g_game.ray.hit == 0 && g_game.ray.ray_x <= 0)
 			render_image(i++, c, g_game.north[tex_y * TAILE_SIZE + TexX]);
+		if (g_game.ray.hit == 1 && g_game.ray.ray_y > 0)
+			render_image(i++, c, g_game.east[tex_y * TAILE_SIZE + TexX]);
+		if (g_game.ray.hit == 1 && g_game.ray.ray_y <= 0)
+			render_image(i++, c, g_game.west[tex_y * TAILE_SIZE + TexX]);
 	}
 	while (i < g_game.data.res.y)
 		render_image(i++, c, g_game.data.floor);

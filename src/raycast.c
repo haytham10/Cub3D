@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   raycasting.c                                       :+:      :+:    :+:   */
+/*   raycast.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hmokhtar <hmokhtar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 16:33:59 by hmokhtar          #+#    #+#             */
-/*   Updated: 2023/04/17 16:34:42 by hmokhtar         ###   ########.fr       */
+/*   Updated: 2023/05/01 18:44:04 by hmokhtar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,8 @@ void	wall_hit(void)
 			g_game.ray.side_y += g_game.ray.delta_y;
 			g_game.ray.hit = 1;
 		}
-		if (g_game.data.map[g_game.ray.map_x][g_game.ray.map_y] == '1')
+		if (g_game.data.map[g_game.ray.map_x][g_game.ray.map_y] == '1' \
+			|| g_game.data.map[g_game.ray.map_x][g_game.ray.map_y] == ' ')
 			hit = 1;
 	}
 }

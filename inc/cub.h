@@ -6,7 +6,7 @@
 /*   By: hmokhtar <hmokhtar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 17:51:15 by hmokhtar          #+#    #+#             */
-/*   Updated: 2023/04/17 20:16:49 by hmokhtar         ###   ########.fr       */
+/*   Updated: 2023/05/02 15:39:42 by hmokhtar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -156,7 +156,7 @@ void		load_player(void);
 void		north_dir(void);
 void		init_direction(char c);
 void		check_valid(void);
-int			valid_texture(char c);
+int			val_t(char c);
 void		mlx_fail(void);
 void		extra_main(void);
 int			key_press(int key);
